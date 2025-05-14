@@ -1,0 +1,28 @@
+Objective
+This project focuses on building a Named Entity Recognition (NER) system utilizing Conditional Random Fields (CRF) to automatically detect and categorize key components within cooking recipe texts. The aim is to label each word (token) into relevant groups such as Quantity, Unit, or Ingredient.
+
+Workflow
+
+Dataset Curation
+
+Text Cleaning and Preprocessing
+
+Feature Extraction and Engineering
+
+Model Training with CRF
+
+Performance Assessment
+
+Model Performance
+The CRF-based NER model demonstrated excellent results, achieving an impressive accuracy of 99.7%, reflecting its strong ability to correctly identify relevant entities in recipe data.
+
+Insights and Observations
+
+Class Weights Were Beneficial, But Not Sufficient:
+Assigning different weights to various labels improved the model’s balance. However, it continued to struggle with rarer categories like ingredient, suggesting that further optimization is necessary.
+
+Insufficient Contextual Understanding:
+A number of errors stemmed from the model's inability to interpret surrounding words. For instance, recognizing the word "taste" after "for" could help the model correctly classify it as neither a unit nor an ingredient.
+
+Sentence Boundaries Had Mixed Impact:
+Introducing special markers for the beginning and end of sentences contributed positively. Nevertheless, when these boundary words lacked clarity, the model occasionally still made incorrect predictions.
